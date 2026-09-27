@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemFood" format=3 uid="uid://5j4iwsnqpvxm"]
+
+[ext_resource type="Texture2D" uid="uid://36ge2gs38dce" path="res://assets/food/ing_002_centeno.png" id="1_a388j"]
+[ext_resource type="Script" uid="uid://co7o2e3vslqkx" path="res://assets/food/food.gd" id="2_qyh5w"]
+
+[resource]
+script = ExtResource("2_qyh5w")
+id = "ing_002"
+nombre = "Grano de Centeno"
+descripcion = "Granos de Centeno."
+valor_cobre = 5
+icono = ExtResource("1_a388j")
