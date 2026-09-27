@@ -1,0 +1,277 @@
+[gd_scene format=3 uid="uid://bfp1eekrf7ej2"]
+
+[ext_resource type="Script" uid="uid://bk6u16yd6u2g7" path="res://menu/main_menu.gd" id="1_5dd4i"]
+[ext_resource type="Texture2D" uid="uid://ci7o4q2jfr4ts" path="res://menu/menu_background.png" id="2_8qj3r"]
+[ext_resource type="Texture2D" uid="uid://b3va2b8okaw0g" path="res://menu/menu_UI.png" id="3_k5y3h"]
+[ext_resource type="Texture2D" uid="uid://bo5iiy3djeed" path="res://menu/rfd_title.png" id="4_0tw43"]
+[ext_resource type="AudioStream" uid="uid://dxs4nx8s7afc6" path="res://menu/main_menu_music.mp3" id="5_8qj3r"]
+[ext_resource type="AudioStream" uid="uid://2sunn30erycr" path="res://menu/main_menu_button.mp3" id="6_8qj3r"]
+[ext_resource type="Texture2D" uid="uid://6jgbfs6twjfk" path="res://menu/ui_button.png" id="7_0tw43"]
+[ext_resource type="Texture2D" uid="uid://coailblg1yro5" path="res://menu/news_icon.png" id="8_8qj3r"]
+[ext_resource type="Texture2D" uid="uid://c4q6fecy6cdia" path="res://menu/credits_icon.png" id="9_k5y3h"]
+[ext_resource type="Texture2D" uid="uid://dpkb3yn3cpyw4" path="res://menu/update_icon.png" id="10_k17ts"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0tw43"]
+font_size = 28
+
+[node name="MainMenu" type="Control" unique_id=546560288]
+process_mode = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+script = ExtResource("1_5dd4i")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=66224682]
+custom_minimum_size = Vector2(450, 250)
+layout_mode = 0
+offset_left = 143.0
+offset_top = 2.0
+offset_right = 593.0
+offset_bottom = 252.0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+texture = ExtResource("4_0tw43")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=622915179]
+z_index = -1
+custom_minimum_size = Vector2(1920, 1080)
+custom_maximum_size = Vector2(1920, 1080)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.9999999)
+texture = ExtResource("2_8qj3r")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect" unique_id=428124405]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_k5y3h")
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/TextureRect" unique_id=1593972310]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 29.000004
+offset_right = 594.0
+offset_bottom = 283.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="menu_music" type="AudioStreamPlayer2D" parent="." unique_id=1405536672]
+unique_name_in_owner = true
+stream = ExtResource("5_8qj3r")
+volume_db = -5.0
+autoplay = true
+parameters/looping = true
+
+[node name="btn_effect" type="AudioStreamPlayer2D" parent="." unique_id=1912014043]
+unique_name_in_owner = true
+stream = ExtResource("6_8qj3r")
+volume_db = -10.0
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=64454301]
+propagate_maximum_size = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 140
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 140
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=1391970811]
+propagate_maximum_size = false
+layout_mode = 0
+offset_left = 143.0
+offset_top = 302.0
+offset_right = 593.0
+offset_bottom = 985.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/separation = 47
+alignment = 1
+
+[node name="btn_newgame" type="TextureButton" parent="VBoxContainer2" unique_id=944265178]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 70)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("7_0tw43")
+texture_hover = ExtResource("7_0tw43")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer2/btn_newgame" unique_id=1131735411]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 10.000032
+offset_right = 320.0
+offset_bottom = 57.00003
+text = "NEW GAME"
+label_settings = SubResource("LabelSettings_0tw43")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="btn_loadgame" type="TextureButton" parent="VBoxContainer2" unique_id=1770684576]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 70)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("7_0tw43")
+texture_hover = ExtResource("7_0tw43")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer2/btn_loadgame" unique_id=148271442]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 10.0000305
+offset_right = 329.0
+offset_bottom = 57.00003
+text = "LOAD GAME"
+label_settings = SubResource("LabelSettings_0tw43")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="btn_savegame" type="TextureButton" parent="VBoxContainer2" unique_id=773637598]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 70)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("7_0tw43")
+texture_hover = ExtResource("7_0tw43")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer2/btn_savegame" unique_id=1073445437]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 10.0
+offset_right = 329.0
+offset_bottom = 57.0
+text = "SAVE GAME"
+label_settings = SubResource("LabelSettings_0tw43")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="btn_settings" type="TextureButton" parent="VBoxContainer2" unique_id=1632812577]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 70)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("7_0tw43")
+texture_hover = ExtResource("7_0tw43")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer2/btn_settings" unique_id=1083277931]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 9.0
+offset_right = 329.0
+offset_bottom = 56.0
+text = "SETTINGS"
+label_settings = SubResource("LabelSettings_0tw43")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="btn_exit" type="TextureButton" parent="VBoxContainer2" unique_id=1212411352]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 70)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("7_0tw43")
+texture_hover = ExtResource("7_0tw43")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer2/btn_exit" unique_id=826746551]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 10.0
+offset_right = 329.0
+offset_bottom = 57.0
+text = "EXIT"
+label_settings = SubResource("LabelSettings_0tw43")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2" unique_id=159661880]
+layout_mode = 2
+theme_override_constants/separation = 90
+alignment = 1
+
+[node name="btn_news" type="TextureButton" parent="VBoxContainer2/HBoxContainer" unique_id=1086953776]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = ExtResource("8_8qj3r")
+texture_hover = ExtResource("8_8qj3r")
+
+[node name="Label" type="Label" parent="VBoxContainer2/HBoxContainer/btn_news" unique_id=1337927340]
+layout_mode = 0
+offset_left = -56.0
+offset_top = 85.0
+offset_right = 143.0
+offset_bottom = 132.0
+text = "News"
+label_settings = SubResource("LabelSettings_0tw43")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btn_credits" type="TextureButton" parent="VBoxContainer2/HBoxContainer" unique_id=1201421971]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = ExtResource("9_k5y3h")
+texture_hover = ExtResource("9_k5y3h")
+
+[node name="Label" type="Label" parent="VBoxContainer2/HBoxContainer/btn_credits" unique_id=45823904]
+layout_mode = 0
+offset_left = -56.0
+offset_top = 82.0
+offset_right = 143.0
+offset_bottom = 129.0
+text = "Credits"
+label_settings = SubResource("LabelSettings_0tw43")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btn_update" type="TextureButton" parent="VBoxContainer2/HBoxContainer" unique_id=1595929057]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = ExtResource("10_k17ts")
+texture_hover = ExtResource("10_k17ts")
+
+[node name="Label" type="Label" parent="VBoxContainer2/HBoxContainer/btn_update" unique_id=846341417]
+layout_mode = 0
+offset_left = -59.0
+offset_top = 82.0
+offset_right = 140.0
+offset_bottom = 129.0
+text = "Update"
+label_settings = SubResource("LabelSettings_0tw43")
+horizontal_alignment = 1
+vertical_alignment = 1

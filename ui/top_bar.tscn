@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://1t2ufrt5q87w"]
+
+[ext_resource type="Texture2D" uid="uid://d1hkbwc8jjpk4" path="res://assets/UI/ui_top_bar.png" id="1_ml30u"]
+
+[node name="TopBar" type="Control" unique_id=2026498818]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 326.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1239079771]
+layout_mode = 0
+offset_top = 10.0
+offset_right = 1920.0
+offset_bottom = 326.0
+grow_horizontal = 2
+size_flags_vertical = 4
+texture = ExtResource("1_ml30u")
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2116334832]
+custom_minimum_size = Vector2(1080, 0)
+custom_maximum_size = Vector2(-1, 200)
+layout_mode = 0
+offset_top = 10.0
+offset_right = 1920.0
+offset_bottom = 210.0
+alignment = 1
