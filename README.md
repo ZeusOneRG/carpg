@@ -8,7 +8,7 @@ The project is built and tested using **Godot 4.7.1**.
 
 ## 📸 Preview
 
-![Game Screenshot](screenshots/screenshot_01.png)
+![Game Screenshot](screenshots/screenshot_1.png)
 
 ---
 
