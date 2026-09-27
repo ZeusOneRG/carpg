@@ -58,3 +58,21 @@ To run or contribute to this project, you will need:
    git clone https://github.com/ZeusOneRG/carpg
    ```
 3. Import the project into the Godot Project Manager by selecting the `project.godot` file.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Whether you want to fix bugs, optimize performance, improve the UI, or help design the crafting tier system, your help is highly appreciated.
+
+### How to Contribute
+1. **Fork** the repository.
+2. Create a new branch for your feature (`git checkout -b feature/AmazingFeature`).
+3. **Commit** your changes (`git commit -m 'Add some AmazingFeature'`).
+4. **Push** to the branch (`git push origin feature/AmazingFeature`).
+5. Open a **Pull Request**.
+
+### Current Needs
+* **Map Design & Exploration:** Assistance in building and structuring the 2D world and exploration zones.
+* **UI Integration & Menus:** Helping finish the Top/Bottom bars and designing specialized UI processing menus for future production buildings.
+* **Core Mechanics:** Developing and refining the multi-tier crafting loop, health/mana bars, and future mob/boss AI mechanics.
