@@ -1,6 +1,6 @@
 # Realms of the Forgotten Depths
 
-**Realms of the Forgotten Depths** is a dark medieval RPG focused on adventure and crafting. The core of the project is a complex, tier-based crafting system that ranges from raw materials to processed resources and final products.
+**Realms of the Forgotten Depths** is a 2.5D top-down dark medieval RPG focused on adventure and crafting. The core of the project is a complex, tier-based crafting system utilizing specialized material processing buildings, moving resources from raw materials to processed components and final products.
 
 The project is built and tested using **Godot 4.7.1**.
 
